@@ -4,10 +4,10 @@ import LightBox from "./lightbox";
 
 const MainContent = () => {
   return (
-    <div className="relative w-full md:mt-12 lg:flex lg:items-center lg:justify-center">
+    <main className="relative w-full md:mt-12 lg:flex lg:items-center lg:justify-center">
       <LightBox />
       <Content />
-    </div>
+    </main>
   );
 };
 
