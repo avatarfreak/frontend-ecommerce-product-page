@@ -26,6 +26,7 @@ const Modal: React.FC<IModal> = ({ isOpen, setIsOpen, children }) => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="close p-2 btn"
               >
+                <span className="sr-only">close</span>
                 <svg
                   width="14"
                   height="15"
