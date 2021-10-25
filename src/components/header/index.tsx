@@ -25,10 +25,10 @@ export const Header = () => {
         </div>
 
         {/* Secondary nav */}
-        <nav className="flex items-center justify-between space-x-4">
+        <div className="flex items-center justify-between space-x-4">
           <Cart />
           <Profile />
-        </nav>
+        </div>
       </nav>
     </header>
   );
