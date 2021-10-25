@@ -30,6 +30,7 @@ const Thumbnail: React.FC<IThumbnail> = ({ img, idx, index, setIndex, width, set
         className={`btn border-2 h-24 rounded-xl ${
           index === idx ? "border-pri-100" : "border-transparent"
         }  `}
+        title={img}
         onClick={() => handleImageId(idx)}
       >
         <img
