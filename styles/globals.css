@@ -1,0 +1,29 @@
+:root {
+  /* Pri */
+
+  --pri-100: hsl(26, 100%, 55%);
+  --pri-110: hsl(25, 100%, 94%);
+
+  /* Neutral */
+
+  --neutral-100: hsl(220, 13%, 13%);
+  --neutral-110: hsl(219, 9%, 45%);
+  --neutral-120: hsl(220, 14%, 75%);
+  --neutral-130: hsl(223, 64%, 98%);
+  --neutral-140: hsl(0, 0%, 100%);
+  --neutral-150: hsl(0, 0%, 0%);
+}
+.nav:hover svg path {
+  @apply stroke-pri-100;
+}
+
+.close:hover svg path {
+  @apply fill-pri-100;
+}
+
+.menu-item:hover {
+  @apply relative;
+  &::after {
+    @apply content-'' absolute top-0 left-0 border-b border-pri-100 border-2 w-full mt-14;
+  }
+}

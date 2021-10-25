@@ -1,0 +1,9 @@
+{
+  "menu": ["Collections", " Men", " Women", " About", " Contact"],
+  "subTitle": "Sneaker Company",
+  "title": "Fall Limited Edition Sneakers",
+  "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+  "discount": "50%",
+  "discountedPrice": [125.0],
+  "price": [250.0]
+}
