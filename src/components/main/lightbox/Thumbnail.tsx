@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
 
 interface IThumbnail {
   img: string;
@@ -33,19 +33,17 @@ const Thumbnail: React.FC<IThumbnail> = ({
   return (
     <div className="hidden sm:block">
       <button
-        className={`btn border-2 h-24 rounded-xl ${
-          index === idx ? "border-pri-100" : "border-transparent"
-        }  `}
+        className={`btn border-2 h-24 rounded-xl ${index === idx ? "border-pri-100" : "border-transparent"
+          }  `}
         onClick={() => handleImageId(idx)}
       >
-        <Image
+        <img
           src={`/images/${img}`}
           alt={img}
           width="92"
           height="92"
-          className={` rounded-xl  ${
-            index === idx ? "opacity-50" : "opacity-100"
-          } `}
+          className={` rounded-xl  ${index === idx ? "opacity-50" : "opacity-100"
+            } `}
         />
       </button>
     </div>

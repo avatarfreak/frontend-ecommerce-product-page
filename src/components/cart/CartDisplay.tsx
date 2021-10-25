@@ -1,20 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import sneaker from "../../../public/images/image-product-1-thumbnail.jpg";
-import Image from "next/image";
 import { useCart } from "@/context/useCart";
 
-interface ICartDisplay {
-  isOpen: boolean;
-}
 
 const CartDetails = () => {
-  const { carts, quantity, price, removeProduct } = useCart();
+  const { quantity, price, removeProduct } = useCart();
   return (
     <>
       <div className="flex  py-6 space-x-4">
         {/* Image */}
         <div className="flex-flex-shrink-0">
-          <Image src={sneaker} alt="sneaker" placeholder="blur" width="50" height="50" />
+          <img src="/images/image-product-1-thumbnail.jpg" alt="sneaker" width="50" height="50" />
         </div>
         {/* Description */}
         <div className="text-neutral-110 font-base flex-auto w-full">
@@ -29,7 +25,7 @@ const CartDetails = () => {
 
         {/* trash */}
         <button onClick={() => removeProduct()} className="btn">
-          <Image src="/images/icon-delete.svg" alt="delete items" height="18" width="14" />
+          <img src="/images/icon-delete.svg" alt="delete items" height="18" width="14" />
         </button>
       </div>
       {/* Button */}
