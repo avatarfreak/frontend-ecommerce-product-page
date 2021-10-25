@@ -13,6 +13,7 @@ const Logo = () => {
               fillRule="nonzero"
             />
           </svg>
+          <span className="sr-only">Sneaker</span>
         </a>
       </Link>
     </div>
