@@ -29,7 +29,7 @@ const CartDetails = () => {
           </p>
         </div>
         `{/* trash */}
-        <button onClick={() => removeProduct()} className="btn">
+        <button onClick={() => removeProduct()} className="btn" aria-label="delete cart item">
           <img src={`${prefix}/images/icon-delete.svg`} alt="delete items" height="18" width="14" />
         </button>
       </div>
