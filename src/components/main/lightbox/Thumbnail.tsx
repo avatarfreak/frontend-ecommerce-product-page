@@ -35,7 +35,7 @@ const Thumbnail: React.FC<IThumbnail> = ({ img, idx, index, setIndex, width, set
         <span className="sr-only">{img}</span>
         <img
           src={`${prefix}/images/${img}`}
-          alt={img}
+          alt={`img-${idx}`}
           width="92"
           height="92"
           className={` rounded-xl  ${index === idx ? "opacity-50" : "opacity-100"} `}

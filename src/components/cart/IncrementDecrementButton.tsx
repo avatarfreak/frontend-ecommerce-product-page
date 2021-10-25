@@ -17,6 +17,7 @@ const IncrementDecrementButton: React.FC<IIncDec> = ({
       <div className="flex items-center justify-between my-6 bg-neutral-130 rounded-lg py-5 px-4 w-full shadow-md">
         {/* Decrement */}
         <button onClick={handleDecrement} className="btn pgt-hover p-2 ">
+          <span className="sr-only">plus item</span>
           <svg
             width="12"
             height="4"
@@ -40,6 +41,8 @@ const IncrementDecrementButton: React.FC<IIncDec> = ({
 
         {/* Increment */}
         <button onClick={handleIncrement} className="btn pgt-hover p-2">
+
+          <span className="sr-only">minus item</span>
           <svg
             width="12"
             height="12"
