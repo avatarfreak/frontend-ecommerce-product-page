@@ -8,6 +8,7 @@ interface ICarousel {
   xPosition: number;
   setWidth: React.Dispatch<React.SetStateAction<number>>;
 }
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH;
 
 const Carousel: React.FC<ICarousel> = (props) => {
   const { images, handleClickPrev, handleClickNext, setWidth, xPosition } = props;
@@ -46,7 +47,7 @@ const Carousel: React.FC<ICarousel> = (props) => {
           className="flex  transform duration-500 transition w-full"
         >
           {images.map((img, idx) => (
-            <img key={idx} src={`/images/${img}`} alt={img} />
+            <img key={idx} src={`${prefix}/images/${img}`} alt={img} />
           ))}
         </div>
 
@@ -58,4 +59,3 @@ const Carousel: React.FC<ICarousel> = (props) => {
   );
 };
 export { Carousel };
-

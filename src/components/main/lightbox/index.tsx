@@ -12,7 +12,7 @@ const LightBox = () => {
   const [width, setWidth] = React.useState(0);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
 
   //Image to preview previous
   const handleClickPrev = () => {
@@ -32,39 +32,32 @@ const LightBox = () => {
     }
   };
 
-
-
   return (
-    < div className="sm:flex sm:flex-col sm:flex-1 w-full " >
-      {
-        !isDesktop ? (
-          <Carousel
-            images={product.original}
-            setWidth={setWidth}
-            xPosition={xPosition}
-            handleClickPrev={handleClickPrev}
-            handleClickNext={handleClickNext}
-          />
-        ) :
-          (
-            <>
-              <div
-                className="cursor-pointer"
-                onClick={() => setIsOpen(true)}>
-                <Carousel
-                  images={product.original}
-                  setWidth={setWidth}
-                  xPosition={xPosition}
-                  handleClickPrev={handleClickPrev}
-                  handleClickNext={handleClickNext}
-                />
-              </div>
-              <Modal isOpen={isOpen} setIsOpen={setIsOpen} >
-                <ModalCarousel />
-              </Modal>
-            </>
-          )
-      }
+    <div className="sm:flex sm:flex-col sm:flex-1 w-full ">
+      {!isDesktop ? (
+        <Carousel
+          images={product.original}
+          setWidth={setWidth}
+          xPosition={xPosition}
+          handleClickPrev={handleClickPrev}
+          handleClickNext={handleClickNext}
+        />
+      ) : (
+        <>
+          <div className="cursor-pointer" onClick={() => setIsOpen(true)}>
+            <Carousel
+              images={product.original}
+              setWidth={setWidth}
+              xPosition={xPosition}
+              handleClickPrev={handleClickPrev}
+              handleClickNext={handleClickNext}
+            />
+          </div>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+            <ModalCarousel />
+          </Modal>
+        </>
+      )}
 
       {/* Thumbnail */}
       <div className="my-4 space-x-7 flex items-center justify-center">
@@ -80,7 +73,7 @@ const LightBox = () => {
           />
         ))}
       </div>
-    </div >
+    </div>
   );
 };
 

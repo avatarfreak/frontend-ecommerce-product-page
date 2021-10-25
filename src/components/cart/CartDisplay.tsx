@@ -2,6 +2,7 @@
 import React from "react";
 import { useCart } from "@/context/useCart";
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH;
 
 const CartDetails = () => {
   const { quantity, price, removeProduct } = useCart();
@@ -10,7 +11,12 @@ const CartDetails = () => {
       <div className="flex  py-6 space-x-4">
         {/* Image */}
         <div className="flex-flex-shrink-0">
-          <img src="/images/image-product-1-thumbnail.jpg" alt="sneaker" width="50" height="50" />
+          <img
+            src={`${prefix}/images/image-product-1-thumbnail.jpg`}
+            alt="sneaker"
+            width="50"
+            height="50"
+          />
         </div>
         {/* Description */}
         <div className="text-neutral-110 font-base flex-auto w-full">
@@ -22,10 +28,9 @@ const CartDetails = () => {
             </span>
           </p>
         </div>
-
-        {/* trash */}
+        `{/* trash */}
         <button onClick={() => removeProduct()} className="btn">
-          <img src="/images/icon-delete.svg" alt="delete items" height="18" width="14" />
+          <img src={`${prefix}/images/icon-delete.svg`} alt="delete items" height="18" width="14" />
         </button>
       </div>
       {/* Button */}

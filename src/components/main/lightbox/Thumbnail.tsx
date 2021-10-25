@@ -9,15 +9,9 @@ interface IThumbnail {
   setIndex: React.Dispatch<React.SetStateAction<number>>;
   setXPosition: React.Dispatch<React.SetStateAction<number>>;
 }
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH;
 
-const Thumbnail: React.FC<IThumbnail> = ({
-  img,
-  idx,
-  index,
-  setIndex,
-  width,
-  setXPosition,
-}) => {
+const Thumbnail: React.FC<IThumbnail> = ({ img, idx, index, setIndex, width, setXPosition }) => {
   const handleImageId = (id: number) => {
     let nextSlide = width * id;
 
@@ -33,17 +27,17 @@ const Thumbnail: React.FC<IThumbnail> = ({
   return (
     <div className="hidden sm:block">
       <button
-        className={`btn border-2 h-24 rounded-xl ${index === idx ? "border-pri-100" : "border-transparent"
-          }  `}
+        className={`btn border-2 h-24 rounded-xl ${
+          index === idx ? "border-pri-100" : "border-transparent"
+        }  `}
         onClick={() => handleImageId(idx)}
       >
         <img
-          src={`/images/${img}`}
+          src={`${prefix}/images/${img}`}
           alt={img}
           width="92"
           height="92"
-          className={` rounded-xl  ${index === idx ? "opacity-50" : "opacity-100"
-            } `}
+          className={` rounded-xl  ${index === idx ? "opacity-50" : "opacity-100"} `}
         />
       </button>
     </div>
