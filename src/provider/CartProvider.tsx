@@ -24,7 +24,7 @@ const CartProvider: React.FC = ({ children }) => {
   };
 
   //Delete cart from list preview
-  const removeProduct = (id: number) => {
+  const removeProduct = () => {
     dispatch({ type: Types.remove });
   };
 
