@@ -6,30 +6,30 @@ import { Cart } from "../cart";
 import { Profile } from "./profile";
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+   const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
-  return (
-    <header>
-      {/* Nav bar */}
-      <nav className="relative flex items-center justify-between p-6 md:border-b ">
-        {/* Primary Menu */}
-        <div className="flex space-x-4 md:space-x-8 md:flex-row-reverse">
-          {/* Menu Toggler */}
-          <MenuToggler isOpen={isOpen} setIsOpen={setIsOpen} />
+   return (
+      <header>
+         {/* Nav bar */}
+         <nav className="relative flex items-center justify-between p-6 md:border-b ">
+            {/* Primary Menu */}
+            <div className="flex space-x-4 md:space-x-8 md:flex-row-reverse">
+               {/* Menu Toggler */}
+               <MenuToggler isOpen={isOpen} setIsOpen={setIsOpen} />
 
-          {/* Menu List */}
-          <MenuList isOpen={isOpen} setIsOpen={setIsOpen} />
+               {/* Menu List */}
+               <MenuList isOpen={isOpen} setIsOpen={setIsOpen} />
 
-          {/* Logo */}
-          <Logo />
-        </div>
+               {/* Logo */}
+               <Logo />
+            </div>
 
-        {/* Secondary nav */}
-        <div className="flex items-center justify-between space-x-4">
-          <Cart />
-          <Profile />
-        </div>
-      </nav>
-    </header>
-  );
+            {/* Secondary nav */}
+            <div className="flex items-center justify-between space-x-4">
+               <Cart />
+               <Profile />
+            </div>
+         </nav>
+      </header>
+   );
 };

@@ -13,6 +13,7 @@
   --neutral-140: hsl(0, 0%, 100%);
   --neutral-150: hsl(0, 0%, 0%);
 }
+
 .nav:hover svg path {
   @apply stroke-pri-100;
 }
@@ -21,9 +22,14 @@
   @apply fill-pri-100;
 }
 
-.menu-item:hover {
+.menu-item {
   @apply relative;
+
   &::after {
-    @apply content-'' absolute top-0 left-0 border-b border-pri-100 border-2 w-full mt-14;
+    @apply content-"" absolute border-2 border-pri-100 w-2/3 md:w-full left-0 top-0 mt-8 md:mt-14 transition  transform duration-500 scale-0 origin-right;
+  }
+
+  &:hover::after {
+    @apply transform scale-100 origin-left;
   }
 }
