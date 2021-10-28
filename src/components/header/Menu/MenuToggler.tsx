@@ -3,7 +3,7 @@ import { IMenuList } from "./interfaces";
 
 const MenuToggler: React.FC<IMenuList> = ({ isOpen, setIsOpen }) => {
    return (
-      <button onClick={() => setIsOpen((prev) => !prev)} className="z-50 md:hidden" aria-expanded="false">
+      <button onClick={() => setIsOpen((prev) => !prev)} className=" btn z-50 md:hidden" aria-expanded="false">
          {!isOpen ? (
             <svg aria-hidden="true" width="16" height="15" xmlns="http://www.w3.org/2000/svg">
                <path
